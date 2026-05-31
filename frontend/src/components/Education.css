@@ -1,0 +1,57 @@
+.edu { background: var(--navy-1); }
+
+.edu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.edu-card {
+  background: var(--navy-card);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--r);
+  padding: 22px;
+  display: flex; gap: 16px; align-items: flex-start;
+  transition: var(--t);
+  animation: fadeUp .5s ease both;
+}
+.edu-card:hover {
+  border-color: rgba(0,194,224,.35);
+  box-shadow: var(--sh-teal);
+  transform: translateY(-4px);
+}
+.edu-card__icon {
+  font-size: 1.6rem; flex-shrink: 0; margin-top: 2px;
+  width: 48px; height: 48px;
+  background: var(--navy-1);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.edu-card__body { flex: 1; }
+.edu-card__top  {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 8px; margin-bottom: 8px;
+}
+.edu-card__degree {
+  font-family: var(--font-head);
+  font-size: .95rem; font-weight: 700;
+  color: var(--white); line-height: 1.3;
+}
+.edu-card__status {
+  font-size: .68rem; font-weight: 700;
+  padding: 2px 9px; border-radius: 50px;
+  background: var(--navy-border); color: var(--text-2);
+  white-space: nowrap; flex-shrink: 0; text-transform: uppercase; letter-spacing: .06em;
+}
+.edu-card__status--live {
+  background: rgba(0,194,224,.15); color: var(--teal);
+}
+.edu-card__inst  { font-size: .87rem; color: var(--text-2); margin-bottom: 3px; }
+.edu-card__board { font-size: .79rem; color: var(--text-3); margin-bottom: 12px; }
+.edu-card__footer { display: flex; justify-content: space-between; align-items: center; }
+.edu-card__dur   { font-size: .8rem; color: var(--teal); font-weight: 600; letter-spacing: .04em; }
+.edu-card__grade { font-size: .79rem; color: var(--text-2); }
+
+@media (max-width: 600px) {
+  .edu__grid { grid-template-columns: 1fr; }
+}

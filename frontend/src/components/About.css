@@ -1,0 +1,20 @@
+.about { background:var(--navy); }
+.about__grid { display:grid; grid-template-columns:1fr 400px; gap:64px; align-items:start; }
+.about__bio { color:var(--text-2); font-size:.97rem; line-height:1.8; margin-bottom:16px; }
+.about__info { display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; margin:28px 0; }
+.about__info-row { display:flex; flex-direction:column; gap:2px; }
+.about__info-k { font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-3); }
+.about__info-v { font-size:.9rem; color:var(--text); font-weight:500; }
+.about__acts { display:flex; gap:10px; flex-wrap:wrap; }
+.about__card { background:var(--navy-card); border:1px solid var(--navy-border); border-radius:var(--r); padding:24px; margin-bottom:18px; transition:var(--t); }
+.about__card:hover { border-color:rgba(0,194,224,.3); box-shadow:var(--sh-teal); }
+.about__card--glow { border-color:rgba(0,194,224,.2); background:linear-gradient(135deg,var(--navy-card),rgba(0,194,224,.04)); }
+.about__card-h { font-family:var(--font-head); font-size:.98rem; font-weight:700; color:var(--white); margin-bottom:18px; display:flex; align-items:center; gap:9px; }
+.about__cert { display:flex; gap:10px; align-items:flex-start; margin-bottom:12px; }
+.about__cert-tick { color:var(--teal); font-size:.85rem; margin-top:2px; flex-shrink:0; }
+.about__cert-title { display:block; font-size:.88rem; color:var(--text); font-weight:500; }
+.about__cert-sub   { display:block; font-size:.76rem; color:var(--text-2); margin-top:1px; }
+.about__fact { display:flex; align-items:center; gap:10px; font-size:.88rem; color:var(--text-2); margin-bottom:9px; }
+.about__fact-dot { width:6px; height:6px; border-radius:50%; background:var(--teal); flex-shrink:0; }
+@media(max-width:1024px){ .about__grid{ grid-template-columns:1fr; gap:40px; } }
+@media(max-width:600px) { .about__info{ grid-template-columns:1fr; } }

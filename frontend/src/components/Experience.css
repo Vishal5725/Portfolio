@@ -1,0 +1,29 @@
+.exp { background:var(--navy-1); }
+.exp__timeline { position:relative; padding-left:44px; }
+.exp__timeline::before { content:''; position:absolute; left:17px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,var(--teal),transparent); }
+.exp__item { position:relative; margin-bottom:24px; animation:fadeUp .5s ease both; }
+.exp__dot { position:absolute; left:-36px; top:20px; width:20px; height:20px; border-radius:50%; background:var(--navy-1); border:2.5px solid var(--teal); display:flex; align-items:center; justify-content:center; }
+.exp__dot-core { width:7px; height:7px; border-radius:50%; background:var(--teal); }
+.exp__item--open .exp__dot { background:var(--teal); }
+.exp__item--open .exp__dot .exp__dot-core { background:var(--navy); }
+.exp__card { background:var(--navy-card); border:1px solid var(--navy-border); border-radius:var(--r); padding:24px 28px; transition:var(--t); cursor:pointer; }
+.exp__card:hover,.exp__item--open .exp__card { border-color:rgba(0,194,224,.35); box-shadow:var(--sh-teal); }
+.exp__card-hdr { display:flex; align-items:flex-start; gap:16px; }
+.exp__card-left { flex:1; }
+.exp__role    { font-family:var(--font-head); font-size:1.08rem; font-weight:700; color:var(--white); margin-bottom:4px; }
+.exp__company { font-size:.9rem; color:var(--teal); font-weight:600; }
+.exp__card-right { display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.exp__dur { font-size:.8rem; color:var(--text-2); background:var(--navy-border); padding:4px 11px; border-radius:50px; white-space:nowrap; }
+.exp__type { font-size:.73rem; font-weight:700; padding:3px 10px; border-radius:50px; border:1px solid; letter-spacing:.04em; white-space:nowrap; }
+.exp__cert-badge { font-size:.72rem; color:var(--mint); font-weight:600; background:rgba(100,255,218,.08); padding:3px 9px; border-radius:50px; border:1px solid rgba(100,255,218,.2); }
+.exp__arrow { color:var(--text-2); font-size:.7rem; margin-left:4px; align-self:center; }
+.exp__bullets { padding-top:20px; border-top:1px solid var(--navy-border); margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+.exp__bullet  { display:flex; align-items:flex-start; gap:10px; font-size:.88rem; color:var(--text-2); line-height:1.7; }
+.exp__bullet-icon { color:var(--teal); font-size:.72rem; margin-top:4px; flex-shrink:0; }
+.exp__cert-box { display:flex; align-items:center; justify-content:space-between; gap:16px; background:rgba(100,255,218,.05); border:1px solid rgba(100,255,218,.15); border-radius:var(--r-sm); padding:14px 18px; margin-top:8px; flex-wrap:wrap; }
+.exp__cert-info { display:flex; flex-direction:column; gap:3px; }
+.exp__cert-label { font-size:.88rem; color:var(--mint); font-weight:600; }
+.exp__cert-by    { font-size:.8rem; color:var(--text-2); }
+.exp__cert-btns  { display:flex; gap:8px; }
+.exp__end { position:absolute; left:11px; bottom:0; width:12px; height:12px; border-radius:50%; background:var(--teal-dark); opacity:.3; }
+@media(max-width:640px){ .exp__card-hdr{ flex-direction:column; } .exp__card-right{ align-items:flex-start; } }
